@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise on 2-1-25</title>
+</head>
+
+<body>
+<h3 style="text-align: center;"><ins>Project Management</ins></h3>
+<form>
+    <table align="center" style="background-color: aqua; padding: 10px 5px;">
+        <tr style="height: 40px;">
+            <td style="width: 110px;"><label for="Project_Name"><b>Project Name</b></label></td>
+            <td><input type="text" name="project_name" id="Project_Name" placeholder="project name"></td>
+        </tr>
+        <tr style="height: 40px">
+            <td><label for="assigned_to"><b>Assigned to</b></label></td>
+            <td>
+                <input list="assigned_to" value="Er Merry Petision">
+                <datalist id="assigned_to">
+                    <option value="Er Merry Petision">Er Merry Petision</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr style="height: 40px">
+            <td><label for="start_date"><b>Start Date</b></label></td>
+            <td><input type="date" name="start_date" id="start_date"></td>
+        </tr>
+        <tr style="height: 40px">
+            <td><label for="end_date"><b>End Date</b></label></td>
+            <td><input type="date" name="end_date" id="end_date"></td>
+        </tr>
+        <tr style="height: 40px">
+            <td><label for="priority"><b>Priority</b></label></td>
+            <td>
+                <input type="radio" id="high" name="priority" value="High">
+                <label for="high"><b>High</b></label>
+                <input type="radio" id="avg" name="priority" value="Average">
+                <label for="avg"><b>Average</b></label>
+                <input type="radio" id="low" name="priority" value="Low">
+                <label for="low"><b>Low</b></label>
+            </td>
+        </tr>
+        <tr style="height: 40px">
+            <td><label for="description"><b>Description</b></label></td>
+            <td><textarea name="description" id="description"></textarea></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2">
+                <input style=" border:none;padding:10px; color: white; background-color: rgb(12, 202, 34);" type="submit"> &nbsp; &nbsp;
+                <input style="border:none;padding:10px 20px; color: white; background-color: rgb(92, 108, 243);" type="button" id="clear" name="clear" value="Clear">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>
