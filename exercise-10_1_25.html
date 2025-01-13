@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise on 10-1-25</title>
+<style>
+    tr{height: 25px;}
+    body{
+        color:rgb(0, 0, 135);
+        font-family: 'Times New Roman', Times, serif;
+        background-color: rgb(170, 201, 245);
+    }
+    button{
+        border:none;
+        padding:10px; 
+        color: white; 
+        background-color:rgb(41, 0, 203)
+    }
+    button:hover {background-color:green}
+    h1{
+        color:rgb(24, 22, 132);
+        text-align: center;
+        text-decoration: underline;
+    }
+    input{
+        border: none;
+        outline:transparent;
+        border-bottom: 2px solid blue ;
+        background-color: white;
+    }
+    input[type="checkbox"],input[type="radio"]{
+        accent-color: rgb(25, 166, 241);
+    }
+    textarea{
+        border: none;
+        outline:transparent;
+        border-bottom: 2px solid blue ;
+        background-color: white;
+    }
+    table{
+        margin: 0 auto;
+        background-color:white ;
+        border-radius: 10px;
+        padding: 10px 5px;
+        width: 40em;
+        text-align: left;
+    }
+    #options{height: 35px;}
+    #list{color: black;}
+    #subheading{font-size: 1.3em;}
+</style>
+</head>
+
+<body>
+<h1>Registration Form</h1>
+<form>
+    <table>
+        <tr>
+            <td><label for="Name" id="subheading"><b>Name</b></label></td>
+        </tr>
+        <tr>
+            <td style="width:50%;"><input type="text" name="name" id="Name" placeholder="first name"></td>
+            <td><input type="text" name="name" id="Name" placeholder="last name"></td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr><td><label for="Address" id="subheading"><b>Address</b></label></td></tr>
+        <tr><td colspan="2"><textarea name="address" id="Address" rows="3" cols="81"></textarea></td></tr>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td><label for="Emailid" id="subheading"><b>Email ID</b></label></td>
+            <td><label for="Number" id="subheading"><b>Phone Number</b></label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="emailid" id="Emailid"></td>
+            <td><input type="text" name="number" id="Number"></td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td style="width:51%;"><label for="date" id="subheading"><b>Date</b></label></td>
+            <td><label for="time" id="subheading"><b>Time</b></label></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="date" id="date"></td>
+            <td><input type="time" name="time" id="time"></td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr id="options"><td><label for="dname" id="subheading"><b>Doctor Name</b></label></td></tr>
+        <tr>
+            <td id="list">
+                <input type="radio" id="d1" name="dname" value="doctor 1">
+                <label for="d1">Doctor 1</label><br>
+                <input type="radio" id="d2" name="dname" value="doctor 2">
+                <label for="d2">Doctor 2</label><br>
+                <input type="radio" id="d3" name="dname" value="doctor 3">
+                <label for="d3">Doctor 3</label>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr><td><label for="typeofdiesease" id="subheading"><b>Type of Disease</b></label></td></tr>
+        <tr>
+            <td>
+                <input list="typeofdiesease" placeholder="--select--">
+                <datalist id="typeofdiesease">
+                    <option value="common cold">common cold</option>
+                    <option value="dengue">dengue</option>
+                    <option value="typhoid">typhoid</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr id="options"><td><label for="symptom" id="subheading"><b>Symptoms</b></label></td></tr>
+        <tr>
+            <td id="list">
+                <input type="checkbox" name="symptom" id="cough" value="cough">
+                <label for="cough">Cough</label><br>
+                <input type="checkbox" name="symptom" id="nausea" value="nausea">
+                <label for="nausea">Nausea</label><br>
+                <input type="checkbox" name="symptom" id="headache" value="headache">
+                <label for="headache">Headache</label><br>
+                <input type="checkbox" name="symptom" id="bodyache" value="bodyache">
+                <label for="bodyache">Bodyache</label>
+            </td>
+        </tr>
+    </table>
+    <table style="background-color: rgb(170, 201, 245); border: none;">
+        <tr>
+            <td style="text-align: center;" colspan="2"><br>
+                <button type="submit">Submit </button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
