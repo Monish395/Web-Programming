@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAB6</title>
+        <link rel="stylesheet" type="text/css" href="lab6_7_8_css.css">
+        <style>
+            p.calign{text-align: center;}
+            video{background-color: rgb(255, 129, 129);}
+        </style>
+    </head>
+
+    <body>
+        <h1>Inserting a video using video tag</h1>
+        <video width="320" height="240" controls>
+            <source src="video1.mp4" type="video/mp4">
+            <source src="video2.ogg" type="video/ogg">
+            Your browser does not support video tag.
+        </video>
+        <hr>
+        <h2 class="ex">Using autoplay muted attribute</h2>
+        <video width="320" height="240" autoplay muted>
+            <source src="video1.mp4" type="video/mp4">
+            <source src="video2.ogg" type="video/ogg">
+            Your browser does not support video tag.
+        </video>
+        <hr>
+        <h1>Inserting a audio using audio tag</h1>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="video2.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <hr>
+        <h1>GPS using Geolocation API</h1>
+        <p>Click the button to get your coordinates</p>
+        <button onclick="getLocation()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else{
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position){
+                x.innerHTML="Lattitude: " + position.coords.latitude + " <br> Longitude: " + position.coords.longitude;
+            }
+        </script>
+        <hr>
+        <h1>CSS inline,internal and external styling</h1>
+        <!--color from inline, alignment from internal, font size and family from external-->
+        <!-- for external css , use link tag -->
+        <p class="calign fontfamilysize" style="color: red;">using inline,internal and external styling</p>
+        <p class="calign fontfamilysize">using internal and external styling</p>
+        <hr>
+        <!-- did bgimage, centering h1,h2 , p.main right aligned -->
+        <h1>Text Decoration</h1>
+        <a href="https://www.google.com/">google</a>
+        <h3>overline h1,line-through h2,underline h3</h3>
+        <hr>
+        <h1>text transformation</h1>
+        <p class="uppercase">This text is transformed to uppercase.</p>
+        <p class="lowercase">This text is transformed to lowercase.</p>
+        <p class="capitalize">This text is capitalized.</p>
+        <hr>
+        <h1>Text indentation</h1>
+        <p class="indent">this is a indented text</p>
+        <hr>
+        <h1>Font family</h1>
+        <p class="fontfamilysize">this is a text with different font family and size</p>
+        <hr>
+        <h1>Font style</h1>
+        <p class="normal">this is text with normal style</p>
+        <p class="italic">this is a text with italic style</p>
+        <p class="oblique">this is a text with oblique style</p>
+        <hr>
+        <h1>font-size</h1>
+        <p class="fontsize">this is text with 10 px font size</p>
+        <hr>
+        <h1>links</h1>
+        <a href="https://www.google.com/">google</a><br>
+        <a href="https://www.w3schools.com/Html/">W3schools</a>
+        <!--22/1/25-->
+        <h1>list item makers</h1>
+        <h2>type- circle</h2>
+        <ul class="a">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <h2>type- square</h2>
+        <ul class="b">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <h2>type- upper roman</h2>
+        <ol class="c">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ol>
+        <h2>type- lower alpha</h2>
+        <ol class="d">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ol>
+        <h2>type-image</h2>
+        <ul class="e">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <h1>CSS tables</h1>
+        <table>
+            <tr>
+                <th>head 1</th>
+                <th>head 2</th>
+                <th>head 3</th>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+            </tr>
+            <tr>
+                <td>cell 4</td>
+                <td>cell 5</td>
+                <td>cell 6</td>
+            </tr>
+            <tr>
+                <td>cell 7</td>
+                <td>cell 8</td>
+                <td>cell 9</td>
+            </tr>
+            <tr>
+                <td>cell 10</td>
+                <td>cell 11</td>
+                <td>cell 12</td>
+            </tr>
+        </table>
+        <h1>CSS box - border,margin,padding</h1>
+        <p class="one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare dignissim arcu, eget dapibus nibh dignissim varius. Maecenas maximus, leo id venenatis gravida, justo velit venenatis purus, ac commodo quam dui vitae leo. Suspendisse dictum purus vel imperdiet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eleifend ut erat vel vestibulum. Integer eu rutrum nunc. Ut non auctor justo. Quisque vel nisi maximus, cursus massa et, varius diam. Nullam sollicitudin vestibulum ante, tincidunt efficitur augue consequat ac. In sollicitudin mi vitae nulla tempus tincidunt. Maecenas rutrum efficitur nunc, vitae lacinia quam ornare non. Duis at nibh porta, posuere dui vel, tincidunt turpis.</p>
+        <p class="two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare dignissim arcu, eget dapibus nibh dignissim varius. Maecenas maximus, leo id venenatis gravida, justo velit venenatis purus, ac commodo quam dui vitae leo. Suspendisse dictum purus vel imperdiet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eleifend ut erat vel vestibulum. Integer eu rutrum nunc. Ut non auctor justo. Quisque vel nisi maximus, cursus massa et, varius diam. Nullam sollicitudin vestibulum ante, tincidunt efficitur augue consequat ac. In sollicitudin mi vitae nulla tempus tincidunt. Maecenas rutrum efficitur nunc, vitae lacinia quam ornare non. Duis at nibh porta, posuere dui vel, tincidunt turpis.</p>
+        <p class="three">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare dignissim arcu, eget dapibus nibh dignissim varius. Maecenas maximus, leo id venenatis gravida, justo velit venenatis purus, ac commodo quam dui vitae leo. Suspendisse dictum purus vel imperdiet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eleifend ut erat vel vestibulum. Integer eu rutrum nunc. Ut non auctor justo. Quisque vel nisi maximus, cursus massa et, varius diam. Nullam sollicitudin vestibulum ante, tincidunt efficitur augue consequat ac. In sollicitudin mi vitae nulla tempus tincidunt. Maecenas rutrum efficitur nunc, vitae lacinia quam ornare non. Duis at nibh porta, posuere dui vel, tincidunt turpis.</p>
+
+        <h1>CSS Positioning</h1>
+        <p class="pos_fixed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare dignissim arcu, eget dapibus nibh dignissim varius. Maecenas maximus, leo id venenatis gravida, justo velit venenatis purus, ac commodo quam dui vitae leo. Suspendisse dictum purus vel imperdiet lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eleifend ut erat vel vestibulum. Integer eu rutrum nunc. Ut non auctor justo. Quisque vel nisi maximus, cursus massa et, varius diam. Nullam sollicitudin vestibulum ante, tincidunt efficitur augue consequat ac. In sollicitudin mi vitae nulla tempus tincidunt. Maecenas rutrum efficitur nunc, vitae lacinia quam ornare non. Duis at nibh porta, posuere dui vel, tincidunt turpis.</p>
+        <h2 class="position_left">this is positioned left</h2>
+        <h2 class="pos_abs">this is alsolutely positioned</h2>
+    </body>
+</html>
