@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAT SET 1</title>
+    <style>
+        body{
+            background-color: rgb(39, 39, 39);
+            font-family:'Times New Roman', Times, serif;
+        }
+        h1{
+            color: rgb(4, 201, 4);
+            text-align: center;
+        }
+        table{
+            border: 2px solid;
+            background-color: rgb(40, 40, 40);
+            border-collapse: collapse;
+            width: 40%;
+            margin: 0 auto;
+        }
+        tr,td,th{
+            padding: 5px;
+        }
+        th{
+            background-color:rgb(30, 255, 0);
+            border: 2px solid black;
+        }
+        td{
+            padding-bottom: 10px;
+            background-color: rgb(152, 76, 206);
+        }
+        td.field{
+            border: none;
+            border-top: 2px solid;
+        }
+        input,textarea{
+            background-color:rgb(152, 76, 206) ;
+            border: none;
+            outline: transparent;
+            border-bottom: 2px solid ;
+        }
+        input.text{
+            width: 50%;
+        }
+        button{
+            font-weight: bold;
+            background-color: rgb(51, 255, 0);
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        button:hover,input:hover,textarea:hover{
+            border: 4px rgb(61, 0, 131);
+            border-style: outset;
+            background-color: blueviolet;
+        }
+        input:invalid + .error {
+            display: block;
+            color: red;
+        }
+        .error {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Survey on User Preferences</h1>
+    <form>
+        <table>
+            <tr><th>GENERAL INFORMATION</th></tr>
+            <tr><td ><label for="name">Name</label></td></tr>
+            <tr><td><input class="text" type="text" name="name" required></td></tr>
+            <tr><td class="field"><label for="phone">Phone</label></td></tr>
+            <tr><td><input class="text" type="text" name="phone" required></td></tr>
+            <tr><td class="field"><label for="email">Email</label></td></tr>
+            <tr><td><input class="text" type="email" name="email" required></td></tr>
+            <span class="error">* Please enter a valid email</span>
+            <tr><th>PREFERENCES</th></tr>
+            <tr><td><label for="communication">What is your preferred mode of Communication? </label></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="call" name="comn" value="call">
+                    <label for="call"> Phone Call</label><br>
+                    <input type="radio" id="text" name="comn" value="text">
+                    <label for="text"> Text Message</label><br>
+                    <input type="radio" id="emailCom" name="comn" value="email">
+                    <label for="emailCom"> Email</label><br>
+                    <input type="radio" id="video" name="comn" value="video">
+                    <label for="video"> Video Call</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="shopping">How do you prefer to shop?</label></td></tr>
+            <tr>
+                <td>
+                    <input type="radio" id="store" name="shop" value="store">
+                    <label for="store"> In-store</label><br>
+                    <input type="radio" id="online" name="shop" value="online">
+                    <label for="online"> Online</label><br>
+                    <input type="radio" id="mobile" name="shop" value="mobile">
+                    <label for="mobile"> Mobile App</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="entertainment">Which type of entertainment(s) do you enjoy?</label></td></tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="movie" name="entt" value="movie">
+                    <label for="movie"> Movie</label><br>
+                    <input type="checkbox" id="music" name="entt" value="music">
+                    <label for="music"> Music</label><br>
+                    <input type="checkbox" id="gaming" name="entt" value="gaming">
+                    <label for="gaming"> Gaming</label><br>
+                    <input type="checkbox" id="reading" name="entt" value="reading">
+                    <label for="reading"> Reading</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="OS">Which opereation system do you use?</label></td></tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="windows" name="os" value="windows">
+                    <label for="windows"> Windows</label><br>
+                    <input type="checkbox" id="mac" name="os" value="mac">
+                    <label for="mac"> MacOS</label><br>
+                    <input type="checkbox" id="linux" name="os" value="linux">
+                    <label for="linux"> Linux</label><br>
+                    <input type="checkbox" id="android" name="os" value="android">
+                    <label for="android"> Android</label><br>
+                    <input type="checkbox" id="ios" name="os" value="ios">
+                    <label for="ios"> iOS</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="mode">Do you prefer light mode or dark mode on apps?</label></td></tr>
+            <tr>
+                <td>
+                    <input type="radio" id="light" name="mode" value="light">
+                    <label for="light"> Light Mode</label><br>
+                    <input type="radio" id="dark" name="mode" value="dark">
+                    <label for="dark"> Dark Mode</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="comments">Drop your comments about the form</label></td></tr>
+            <tr><td><textarea name="comment" rows="4" cols="77"></textarea></td></tr>
+            <tr><td style="text-align: center;"><button>Submit</button></td></tr>
+        </table>
+    </form>
+</body>
+</html>

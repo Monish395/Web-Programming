@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAT SET 3</title>
+    <style>
+        body{
+            background-color: lightgoldenrodyellow;
+            font-family:'Times New Roman', Times, serif;
+            font-size:x-large;
+        }
+        h1{
+            color: rgb(11, 4, 201);
+            text-align: center;
+        }
+        table{
+            border: 5px groove crimson;
+            background-color: rgb(40, 40, 40);
+            border-collapse: collapse;
+            width: 95%;
+            margin: 0 auto;
+        }
+        tr,td{
+            padding: 20px;
+        }
+        tr{
+            height: 70px;
+        }
+        td{
+            border: 2px solid;
+            padding-bottom: 10px;
+            background-color: rgb(255, 255, 0);
+        }
+        input,textarea{
+            background-color:rgb(255, 255, 0) ;
+            border: none;
+            outline: transparent;
+            border-bottom: 2px solid ;
+        }
+        input.text{
+            height: 20px;
+            width: 70%;
+        }
+        button{
+            font-weight: bold;
+            font-size: large;
+            background-color: rgb(0, 217, 255);
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        button:hover,input:hover,textarea:hover{
+            border: 4px rgb(255, 0, 187);
+            border-style: outset;
+            background-color: rgb(241, 236, 128);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Course Feedback Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="name">Student Name</label></td>
+                <td colspan="4"><input class="text" type="text" name="name" pattern="[A-Za-z\s]" title="Name should contain only letters and spaces" required></td>
+            </tr>
+            <tr>
+                <td class="field"><label for="course">Course Name</label></td>
+                <td colspan="4"><input class="text" type="text" name="course" pattern="[A-Za-z\s]" title="Course Name should contain only letters and spaces" required></td>
+            </tr>
+            <tr>
+                <td class="field"><label for="instructor">Instructor's Name</label></td>
+                <td colspan="4"><input class="text" type="text" name="instructor" pattern="[A-Za-z\s]" title="Instructor Name should contain only letters and spaces"  required></td>
+            </tr>
+            <tr><td><label for="rating">How much would you rate the course content? </label></td>
+                <td>
+                    <input type="radio" id="poor" name="rate" value="poor">
+                    <label for="poor"> Poor</label>
+                </td>
+                <td>
+                    <input type="radio" id="fair" name="rate" value="fair">
+                    <label for="text"> Fair</label>
+                </td>
+                <td>
+                    <input type="radio" id="good" name="rate" value="good">
+                    <label for="good"> Good</label>
+                </td>
+                <td>
+                    <input type="radio" id="excellent" name="rate" value="excellent">
+                    <label for="excellent"> Excellent</label>
+                </td>
+            </tr>
+            <tr><td class="field"><label for="improvement">Which of these do you think need improvement?</label></td>
+                <td>
+                    <input type="checkbox" id="assignments" name="improve" value="assignments">
+                    <label for="assignments"> Assignments</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="Lectures" name="improve" value="Lectures">
+                    <label for="Lectures"> Lectures</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="Materials" name="improve" value="Materials">
+                    <label for="Materials"> Materials</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="lab equipments" name="improve" value="lab equipments">
+                    <label for="lab equipments"> Lab Equipments</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="field"><label for="comments">Provide additional feedback (if any)</label></td>
+                <td colspan="4"><textarea name="comment" rows="4" cols="110"></textarea></td>
+            </tr>
+            <tr><td colspan="5" style="text-align: center;"><button>Submit</button></td></tr>
+        </table>
+    </form>
+</body>
+</html>
