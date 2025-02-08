@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab 10</title>
+        <style> 
+            div.ex1 {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              animation-name: example;
+              animation-duration: 4s;
+            }
+            
+            @keyframes example {
+              from {background-color: red;}
+              to {background-color: yellow;}
+            }
+
+            div.ex2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example2;
+                animation-duration: 4s;
+            }
+
+            @keyframes example2 {
+                0%   {background-color: red;}
+                25%  {background-color: yellow;}
+                50%  {background-color: blue;}
+                100% {background-color: green;}
+            }
+
+            div.ex3{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example;
+                animation-duration: 4s;
+            }
+
+            @keyframes example {
+                0%   {background-color:red; left:0px; top:0px;}
+                25%  {background-color:yellow; left:200px; top:0px;}
+                50%  {background-color:blue; left:200px; top:200px;}
+                75%  {background-color:green; left:0px; top:200px;}
+                100% {background-color:red; left:0px; top:0px;}
+            }
+            </style>
+    </head>
+    <body>
+        <h1>Mapping</h1>
+        <map name="beachmap">
+            <area shape="poly" coords="236,24,335,24,332,29,332,84,255,84,255,31,238,31,236,24" href="/" alt="Beach hut" title="beach hut - where you get changed">
+            <area shape="circle" coords="99,92,12" nohref alt="">
+            <area shape="circle" coords="271,69,10" href="/" alt="life ring" title="Life ring - to help ypu swim">
+            <area shape="rect" coords="369,10,351,21" href="/" alt="flag" title="Flag - says if it safe to swim">
+        </map>
+        <p><img src="imagemap.jpg" alt="" usemap="#beachmap"></p>
+
+        <h1>CSS Animation</h1>
+        <h2>example 1</h2>
+        <div class="ex1"></div>
+
+        <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+        <h2>example 2</h2>
+        <div class="ex2"></div>
+
+        <h2>example 3</h2>
+        <div class="ex3"></div>
+    </body>
+</html>
